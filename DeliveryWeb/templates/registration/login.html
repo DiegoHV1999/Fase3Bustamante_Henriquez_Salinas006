@@ -7,25 +7,25 @@
         <h1 class="col-3 pb-4 mx-auto text-primary">Iniciar sesión</h1>
 
     </div>
-    
+
 
     <div class="row">
-        
-        
-        
+
+
+
         <div class="col-6"><!--div de formulario-->
         <form method="POST">
             {% csrf_token %}
             {{form|crispy}}
             <!-- {{form.as_p}} -->
             <button class="btn btn-success" type="submit">Ingresar</button>
-            
+
         </form>
         </div><!--fin div de formulario-->
-        <img class="col-6 col-sm-6" src="{% static 'images/LogoHTML.png' %}" alt="">
+        <img class="col-6" src="{% static 'images/LogoHTML.png' %}" alt="">
     </div>
 
-    
+
 </div> <!--Fin div general-->
-    
+
 {%  endblock %}
