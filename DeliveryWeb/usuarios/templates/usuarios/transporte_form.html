@@ -1,0 +1,89 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<body>
+    
+
+<style>
+    .slider
+        {
+            
+            background: url("{% static 'images/camion.jpg' %}");
+            height: 170vh;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+
+        }
+    </style>
+<div class="container-fluid col-12 slider">
+<div class="row "> <!--row-->
+    
+        <div class="col-6 pt-5 mt-4 mr-auto">
+            <div>
+                <h1 class="pb-5">¡Registro!</h1>
+            </div>
+    
+        <form class="col-6  text-dark" action="" method="POST">
+        {%csrf_token%}
+            <table>
+                {{form|crispy}}
+                <!-- {{form.as_p}} -->
+        
+            </table>
+            <button class="btn btn-success">Enviar</button>
+
+    </form>
+        </div>
+               
+        
+    </div> <!--Fin de row-->
+    
+</div> 
+    
+    
+
+<div>
+    <div class="container-fluid row pt-5" > <!--Inicio de la tercera caja contenedora-->
+        <div class="col-md-4   mx-auto my-5">  <!--Inicio de columna-->
+            <div class="d-flex justify-content-center">
+                
+                <img src="{% static 'images/camion.svg' %}" width="50" height="50" alt="">
+            </div>
+            <h4 class="text-center">Envíos a todo Chile</h4>
+    
+                <p class="text-center pt-3">
+                    Contamos con el mejor equipo de transportistas del país
+                </p>
+        </div> <!--Fin de columna-->
+    
+        <div class="col-md-4  my-5 mx-auto"  > <!--Inicio de la segunda columna-->
+            <div class="d-flex justify-content-center">
+                
+                <img  src="{% static 'images/gps.svg' %}" width="50px" height="50px"  alt="">
+            </div>
+            <h4 class="text-center">A la puerta de tu casa</h4>
+            <p class="text-center pt-3">
+                No debes viajar, llevamos tus pedidos a la puerta de tu casa
+            </p>
+    
+        </div> <!--Fin de la segunda columna-->
+    
+        <div class="col-md-4   my-5 mx-auto"  > <!--Inicio de la tercera columna-->
+            <div class="d-flex justify-content-center">
+                
+                <img  src="{% static 'images/medal.svg' %}" width="50px" height="50px"  alt="">
+            </div>  
+            <h4 class="text-center">Certificación de transporte</h4>
+            <p class="text-center pt-3">
+                Contamos con la mejor certificación de transporte gracias a AENOR
+            </p>
+    
+        </div>
+</div>
+</body>
+
+{% endblock %}

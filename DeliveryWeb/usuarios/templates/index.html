@@ -1,0 +1,357 @@
+
+     <head>
+          
+          {% extends "Base_generic.html" %}
+          {% block content %}
+     
+          {% load static %}
+     </head>
+     
+
+
+     <div class="container">
+     	<div >
+
+     <!-- SECCION PRINCIPAL -->
+     <section id="home" data-stellar-background-ratio="0.5">
+     	
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-3 col-md-6 col-sm-12 col-xl-8 mx-auto ">
+                         <div class="home-info ">
+                              <h3>Desde el local, hasta tu puerta</h3>
+                              <h1>Todo lo que quieras comer en un solo lugar!</h1>
+                              <form action="" method="get" class="online-form">
+                                   <input type="email" name="correo" class="form-control" placeholder="Ingresa tu correo"required>
+                                   <button type="submit" class="form-control">A recibir promos!</button>
+                              </form>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- CALIDAD -->
+     <section id="feature" data-stellar-background-ratio="0.5">
+          <div class="container d-flex ">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12 col-xl-12">
+                         <div class="section-title">
+                              <h1>Envios por todo Santiago!</h1>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xl-6">
+                         <ul class="nav nav-tabs" role="tablist">
+                              <li class="active"><a href="#tab01" aria-controls="tab01" role="tab" data-toggle="tab">Medidas de Higiene</a></li>
+
+                              <li><a href="#tab02" aria-controls="tab02" role="tab" data-toggle="tab">Confianza</a></li>
+
+                              <li><a href="#tab03" aria-controls="tab03" role="tab" data-toggle="tab">Rapidez</a></li>
+                         </ul>
+
+                         <div class="tab-content">
+                              <div class="tab-pane active" id="tab01" role="tabpanel">
+                                   <div class="tab-pane-item">
+                                        <h2>Distancia social</h2>
+                                        <p>Al momento de entregar los pedidos los corredores mantienen distancia con nuestros clientes, es responsabilidad de todos no dejar que el virus se propague!</p>
+                                   </div>
+                                   <div class="tab-pane-item">
+                                        <h2>Sanitizados</h2>
+                                        <p>Contamos con alcohol gel y sanitizante los cuales utilizamos despues de cada entrega! Implementandolo en uniforme y medio de transporte!</p>
+                                   </div>
+                              </div>
+
+
+                              <div class="tab-pane" id="tab02" role="tabpanel">
+                                   <div class="tab-pane-item">
+                                        <h2>Restoranes certificados</h2>
+                                        <p>Desde locales gourmet hasta locales de comida rapida, elige lo que te de mas antojo!</p>
+                                   </div>
+                                   <div class="tab-pane-item">
+                                        <h2>Corredores 24/7</h2>
+                                        <p>Disponibilidad las 24 horas! Incluido feriados y festivos.</p>
+                                   </div>
+                                   <div class="tab-pane-item">
+                                        <h2>Diversos metodos de pago</h2>
+                                        <p>Puedes cancelar cuando el pedido ya este en tus manos o directamente a los locales si asi lo prefieres!</p>
+                                   </div>
+                              </div>
+
+                              <div class="tab-pane" id="tab03" role="tabpanel">
+                                   <div class="tab-pane-item">
+                                        <h2>Tiempos record!</h2>
+                                        <p>Independientemente de la distancia, nuestros corredores llegan en menos de 30 minutos a su hogar. Sabemos que el hambre no espera!</p>
+                                   </div>
+                                   <div class="tab-pane-item">
+                                        <h2>Opciones de viaje</h2>
+                                        <p>Escogemos el medio de trasnporte que mas se acomode a su pedido. Contamos con autos, motos y bicicletas. Que no paren los viajes!</p>
+                                   </div>
+                              </div>
+                         </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xl-6 col-lg-6">
+                         <div class="col-12">
+                              <img src="{% static 'images/Viaje.jpg' %}" class="img-responsive" alt="Thin Laptop" width="340" height="500">                             
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- INSTRUCTIVO -->
+     <section id="about" data-stellar-background-ratio="0.5">
+          <div class="container">
+               
+
+                    <div class="col-md-offset-3 col-md-8 col-sm-14 pb-5 mx-auto pb-5">
+                         <div class="section-title">
+                              <h1>Pide en 3 simples pasos</h1>
+                         </div>
+                    </div>
+                    <div class="row col-12">
+
+                    <div class="col-md-4 col-sm-4 d-flex justify-content-center">
+                         <div class="team-thumb mr-3">
+                              <img src="{% static 'images/Comida.jpg' %}" class="img-responsive" alt="Andrew Orange">
+                              <div class="team-info team-thumb-up">
+                                   <h2>Paso 1</h2>
+                                   <p>Elige entre todos los productos que tenemos para ti!</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="team-thumb ">
+                              <div class="team-info team-thumb-down">
+                                   <h2>Paso 2</h2>
+                                   <p>Ingresa el metodo de pago.</p>
+                              </div>
+                              <img src="{% static 'images/MujerTele.jpg' %}" class="img-responsive" alt="Catherine Soft">
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="team-thumb ml-3">
+                              <img src="{% static 'images/padrehijo.jpg' %}" class="img-responsive" alt="Jack Wilson">
+                              <div class="team-info team-thumb-up">
+                                   <h2>Jack Wilson</h2>
+                                   <p>Listeilor! Espera que el restorant prepare tu orden</p>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+     <!-- RESEÑAS -->
+     <section id="testimonial" data-stellar-background-ratio="0.5" >
+          <div class="container" >
+               <div class="row" >
+                    <div class="col-md-6 col-sm-12 mx-auto">
+                         <div class="testimonial-info">
+                              
+                              <div class="section-title">
+                                   <h1>Delivery que satisface tu paladar</h1><small>Reseñas en redes sociales...</small>
+                              </div>
+
+                              <div class="owl-carousel owl-theme ">
+                                   <div class="item">
+                                        <h3>Super rapido! y la comida estupenda :D</h3>
+                                        <div class="testimonial-item">
+                                             <img src="{% static 'images/feliz1.jpg' %}" class="img-responsive" alt="Michael">
+                                             <h4>Lucero Gomez (Twitter)</h4>
+                                        </div>
+                                   </div>
+
+                                   <div class="item">
+                                        <h3>No se demoro nada el repartidor asi que la comida llego a la temperatura precisa :P</h3>
+                                        <div class="testimonial-item">
+                                             <img src="{% static 'images/Comiendo1.jpg' %}" class="img-responsive" alt="Sofia">
+                                             <h4>Sofia Andurria (Facebook)</h4>
+                                        </div>
+                                   </div>
+
+                                   <div class="item">
+                                        <h3>Todo fue demasiado rapido, quede con ganas de mas!</h3>
+                                        <div class="testimonial-item">
+                                             <img src="{% static 'images/Comiendo2.jpg' %}" class="img-responsive" alt="Monica">
+                                             <h4>Mia (Twitter)</h4>
+                                        </div>
+                                   </div>
+                              </div>
+
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+     <!-- PIDE AQUI -->
+     <section id="pricing" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row col-md-12 col-sm-12">
+
+                    <div class="col-8 mx-auto ">
+                         <div class="section-title">
+                              <h1>A donde llevaremos el pedido?</h1>
+                         </div>
+
+                         <div class="col-12">
+                              <form id="mi-formulario" action="index.html">
+                                  <label>Direccion: </label>
+                                  <input type="text" name="email" class="form-control col-6 col-xs-12 mb-3" required placeholder="ej: Avenida Grecia #1200">
+                                
+                                  <label>Numero de contacto: </label>
+                                  <input type="text" name="fono" minlength="9" class="form-control col-6 col-xs-12  mb-3" required placeholder="+569XXXXXXXX">
+                                
+                                  <label>Persona que recibira el pedido: </label>
+                                  <input type="text" name="fecha" min="2018-01-01" class="form-control mb-3 col-6 col-xs-12 " required placeholder="Mi tia Marta">
+                                
+                                  <button class="btn btn-success">Enviar</button>
+                                </form>
+                               </div>
+
+                         <script>
+      $(function() 
+      {
+        $("#mi-formulario").validate({
+             rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: "required",
+                    fono: "required",
+                    fecha: "required",
+                    password2: {
+                        required: true,
+                        equalTo: "#password"
+                    }   
+                }, //rules
+            messages: {
+                email: {
+                    required: 'Ingresa tu correo electrónico',
+                    email: 'Formato de correo no válido'
+                },
+                password: {
+                    required: 'Ingresa una contraseña',
+                    minlength: 'Caracteres insuficiente'
+                },
+                fono:{
+                    required: 'Ingrese un número de celular',
+                    minlength: 'Cantidad de digitos insuficiente'
+                },
+                fecha:{
+                    required: 'Seleccione una fecha válida',
+                    min: 'Fecha no corresponde'
+                },
+                password2: {
+                    required: 'Rengresa la contraseña',
+                    equalTo: 'Las contraseñas ingresadas no coinciden',
+                    minlength: 'Caracteres insuficiente'
+
+                }
+            }//messages
+        }); //$('#mi-formulario').validate
+    }); //function
+
+  </script>
+   </div>
+                    </div>                
+               </div>
+          </div>
+          <div>
+  
+     </section>   
+
+
+</head>
+
+<body>
+     
+  
+
+     <!-- LLAMANOS -->
+     <section id="contact" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-1 col-md-10 col-sm-12">
+                         <form id="contact-form" role="form" action="" method="post">
+                              <div class="section-title col-8 mx-auto">
+                                   <h1>¿Tienes mas dudas? <br>  Contactanos!</h1>
+                              </div>
+<br>
+                              <div class="col-md-4 col-sm-4">
+                                   <input type="text" class="form-control" placeholder="Alias" name="name" required>
+                              </div>
+                              <div class="col-md-4 col-sm-4">
+                                   <input type="email" class="form-control" placeholder="Correo electronico" name="correo" required>
+                              </div>
+                              <div class="col-md-4 col-sm-4">
+                                   <input type="submit" class="form-control" name="Enviar" value="Enviar mensaje">
+                              </div>
+                              <div class="col-md-12 col-sm-12">
+                                   <textarea class="form-control" rows="8" placeholder="¿Como te ayudamos?" name="texto" required></textarea>
+                              </div>
+                         </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>       
+
+
+     <!-- PIE DE PAGINA -->
+     <footer id="footer" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="copyright-text col-md-12 col-sm-12">
+                         <div class="col-md-6 col-sm-6 mx-auto">
+                              <p>Copyright &copy; 2020 Equipo Entregas - Desarrolladores: <br> -Diego Henriquez <br> -Leandro salinas <br> -Jose Bustamante</p> 
+                         </div>
+
+                         <div class="col-md-6 col-sm-6 mx-auto">
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- JQUERY -->
+     <script src="{% static 'js/jquery.js' %}"></script>
+     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+     <script src="{% static 'js/smoothscroll.js' %}"></script>
+     <script src="{% static 'js/custom.js' %}"></script>
+     <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>
+
+{% endblock %}

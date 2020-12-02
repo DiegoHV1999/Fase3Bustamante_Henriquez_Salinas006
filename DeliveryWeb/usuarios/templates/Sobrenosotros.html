@@ -1,0 +1,119 @@
+
+    <head>
+          
+        {% extends "Base_generic.html" %}
+        {% block content %}
+   
+        {% load static %}
+   </head>
+    
+    
+    <!--Titulo-->
+            <div id="container">
+                <br> 
+            <h1 class="pt-5 d-flex justify-content-center">Sobre Nosotros</h1>
+            </div>
+        
+    
+
+    <br>
+    
+    <div class="container-fluid col-12"> <!--Inicio de la caja general-->
+        <div class="col-10 mx-auto">
+            <div class="container col-8">
+                <img class="col-12" src="{% static 'images/1.jpg' %}"   >
+            </div>
+                <h2 class="pt-5">Nuestro comienzo</h2>
+
+                <div >
+                    <p class="p1 pt-2">Somos una compañia de delivery que comenzo a funcionar en julio del 2020, Nosotros trabajamos actualmente en Chile Ofreciendo la capacidad a nuestros usuarios de llevar sus productos a domicilio gracias a nuestra opcion de agregar su propio negocio con el fin de expander su negocio mas haya de su ubicacion y a la vez forjandonos un renombre en cuanto a calidad</p>
+                    <h3 class="pt-5 d-flex justify-content-center">beneficios al trabajar con nosotros</h3>
+                    <ul class="pt-3 col-8 list-group mx-auto"> <!--permite definir una lista ordenada-->
+                        <li class="d-flex justify-content-center">Realizar tu pedido de una forma practica</li>     <!--definición de cada elemento de la lista-->
+                        <li class="d-flex justify-content-center">Incrementa la visivilidad y reputacion de tus productos </li>
+                        <li class="d-flex justify-content-center">Un sistema optimizado de entrega a domicilio</li>
+                    </ul>  
+                </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-12 container-fluid pt-5">
+            <div class="card col-12"><!--inicio de card-->
+            <div class="col-10 mx-auto "> <!--h2-->
+            <h2 class="pb-3 pt-5">Locales con los que hemos trabajado</h2>
+            </div> <!--h2-->
+                <div class="container">
+                    <div class="pb-5 d-flex justify-content-center card-img-top px-5 col-12"> <!--Imagen 1-->
+                        <img class="col-12" src=" {% static 'images/3.jpg' %}" >
+                    </div>
+                </div>
+            
+            <div> <!--Imagen 1-->
+                
+                
+                <div class=" col-12 ml-auto d-flex card-body"> <!--Imagen svg-->
+                    <p class="p1 col-8 container pr-2 py-2">Desde que empezamos a trabajar en conjunto nuestra tienda ha ido ganando mas clientes gracias a los envios a domicilio </p>
+                    <svg class="" width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-award" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M9.669.864L8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193l-1.51-.229L8 1.126l-1.355.702-1.51.229-.684 1.365-1.086 1.072L3.614 6l-.25 1.506 1.087 1.072.684 1.365 1.51.229L8 10.874l1.356-.702 1.509-.229.684-1.365 1.086-1.072L12.387 6l.248-1.506-1.086-1.072-.684-1.365z"/>
+                        <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                      </svg>
+                </div> <!--imagen svg-->
+            </div>
+        </DIV><!--Fin de card-->
+        
+
+                
+                
+                
+                
+                <br>
+        <div class="card pt-5">
+                <div class="container ">
+                    <div class="d-flex justify-content-center px-5"><!--imagen 2-->
+                        <img class="col-12" src="{% static 'images/2.jpg' %}" >
+                    </div> <!--imagen-->
+                </div>
+
+                <div class="col-12 ml-auto d-flex py-5"> <!--imagen svg-->
+                    <p class="p1 col-8 container pr-2">Desde la pandemia nuestras ventas habian bajado pero gracias a este servicio hemos podido recuperarnos y dar a nuestros clientes nuestros servicios</p>
+                <svg class="" width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-award" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M9.669.864L8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193l-1.51-.229L8 1.126l-1.355.702-1.51.229-.684 1.365-1.086 1.072L3.614 6l-.25 1.506 1.087 1.072.684 1.365 1.51.229L8 10.874l1.356-.702 1.509-.229.684-1.365 1.086-1.072L12.387 6l.248-1.506-1.086-1.072-.684-1.365z"/>
+                    <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                  </svg>
+
+                
+                </div>
+                    
+            </div>
+        </div>
+        </div>
+    </div><!--Fin de la caja general-->
+   
+        
+
+        <div class="container d-flex justify-content-center pt-5">
+            
+            <h1 class="pb-5" >Crecemos contigo</h2>
+                
+            </div>
+
+        
+
+
+
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+
+
+
+</html>
+
+{% endblock %}

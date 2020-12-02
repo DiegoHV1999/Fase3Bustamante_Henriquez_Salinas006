@@ -1,0 +1,42 @@
+{%extends "Base_generic.html"%}
+{% load static %}
+{%block content%}
+<div class="container-fluid col-12 py-5 "> <!--div contenedor-->
+    
+    <div class="card mx-auto pt-2 pb-5 col-8 col-md-8 col-sm-10 col-xs-12"> <!--div card-->
+        <img class="card-img-top" src="{% static 'images/LogoHTML.png' %}" alt="">
+        <div class="card-body">
+            <h1 class="pt-5 d-flex justify-content-center">{{local.nombre}}</h1>
+            <ul class="list-group list-group-flush">
+                
+                <li class="list-group-item mx-auto">{{local.rut}}</li>
+                <li class="list-group-item mx-auto">{{local.nombre}}</li>
+                <li class="list-group-item mx-auto">{{local.correo}}</li>
+                <li class="list-group-item mx-auto">{{local.telefono}}</li>
+                <li class="list-group-item mx-auto">{{local.direccion}}</li>
+                {% if local.tipoEmpresa == '1' %}
+                <li class="list-group-item mx-auto">Gastronomica</li>
+                {% elif local.tipoEmpresa == '2' %}
+                <li class="list-group-item mx-auto">Salud</li>
+                {% elif local.tipoEmpresa == '3' %}
+                <li class="list-group-item mx-auto">Logistica</li>
+                {% else %}
+                <p>No tiene ningun tipo asignado</p>
+
+
+
+                {% endif %}
+                
+                
+
+            </ul>
+
+        </div>
+
+    
+
+
+   
+</div><!--fin div card-->
+</div><!--fin div contenedor-->
+{%endblock%}

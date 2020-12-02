@@ -1,0 +1,261 @@
+<head>
+          
+    {% extends "Base_generic.html" %}
+    {% block content %}
+
+    {% load static %}
+</head>
+  
+    <style>
+
+        .slider
+        {
+            
+            background: url("{% static 'images/gentecomiendo.jpg' %}");
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+
+        }
+
+        label.error {
+        color: red;
+        width: 300px;
+        font-size: 0.8em;
+        margin-top: -5px;
+        margin-bottom: 10px;
+    } 
+    </style>
+
+    <script>
+       $(function()
+       {
+           $("#formulario").validate({
+               rules: {
+                   rut: "required",
+                   nombre: "required",
+                   email: {
+                       required: true,
+                       email: true
+                   },
+
+                   telefono: "required",                   
+                   direccion: "required",
+                   pwd: {
+                        required: true
+                },
+
+                   pwd2: { 
+                       required: true,
+                       equalTo: "#pwd"
+                       
+                       },
+                   select: {
+                       required: true,
+                    }
+                       
+                   
+
+
+               }, //reglas
+               messages: {
+                   rut: {
+                       required: 'Ingresa tu rut',
+                       minLength: 'Caracteres insuficientes'
+                    },
+                    nombre: {
+                        required: 'Ingresa tu nombre',
+                        minLength: 'Ingresa un nombre valido'
+                    },
+                    email: {
+                        required: 'Ingresa el correo',
+                        email: 'Formato de correo no valido'
+                    },
+
+                    telefono: {
+                        required: '(9)12345678',
+                        minLength: 'Caracteres insuficientes',
+                        maxlength: 'Excede el numero de caracteres'
+                    },
+                   
+                    direccion: {
+                        required: 'Ingresa tu dirección',
+                        minLength: 'Ingresa una direccion valida'
+                    },
+
+                    pwd: {
+                        required: 'Ingresa la clave',
+                        minLength: 'Caracteres insuficientes',
+
+
+                    },
+
+                    pwd2: {
+                        required: 'Ingresa la clave',
+                        minLength: 'Caracteres insuficientes',
+                        equalTo: 'Las claves deben ser iguales'
+                       
+                        
+                        
+
+                    },
+
+                    select: {
+                        required: 'Ingresa el tipo de empresa'
+                    }
+
+
+
+               }//messages
+
+           }); //validate
+
+       }); //funcion
+
+    </script>
+    
+  </head>
+
+
+  <body>
+
+    
+    
+
+    <div class="container-fluid slider d-flex align-items-center "><!--Segunda caja contenedora-->
+    
+        
+            <div class="col-12 ">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-6 ml-auto pt-5">
+                    <h1 class="text-white">¡Registro!</h1>
+                </div>
+                <form id="formulario" action="#" > <!--Inicio del formulario-->
+                    <div class="form-group row col-6 pt-2 ml-auto"> <!--Formulario Nombre de tienda-->
+                        <input type="text" name="rut" minlength="8" required placeholder="Rut empresa" class="form-control col-md-8 col-sm-10 ml-auto">
+                    </div> 
+
+                    <div class="form-group row col-6 ml-auto"> <!--Formulario Nombre del dueño-->
+                        <input type="text" name="nombre" minlength="3" required placeholder="Nombre del dueño" class="form-control  col-md-8 col-sm-10 ml-auto">
+                     </div> 
+
+                     <div class="form-group row col-6 ml-auto"> <!--Formulario correo de contacto-->
+                        <input type="email" name="email"  required placeholder="nombre@dominio.cl" class="form-control col-md-8 col-sm-10 ml-auto">
+                    </div> 
+
+                    <div class="form-group row col-6 ml-auto">
+                        <input type="text" name="telefono" minlength="9" maxlength="9" required placeholder="(9)12345678" class="form-control col-md-8 col-sm-10 ml-auto ">
+                    </div>
+
+                    <div class="form-group row col-6 ml-auto">
+                        <input type="text" name="direccion" minlength="10" required placeholder="Dirección" class="form-control col-md-8 col-sm-10 ml-auto ">
+                    </div>
+
+                    <div class="form-group row col-6 ml-auto">
+                        <input type="password"  id="pwd" name="pwd" minlength="6" required placeholder="Clave" class="form-control col-md-8 col-sm-10 ml-auto" >
+                    </div>
+
+                    <div class="form-group row col-6 ml-auto">
+                        <input type="password"  name="pwd2" minlength="6" required placeholder="Reingresa la clave" class="form-control col-md-8 col-sm-10 ml-auto ">
+                    </div>
+
+
+
+                    <div class="for-group row col-6 ml-auto">
+                        <!--input type="text" name="tipo" required placeholder="Tipo de empresa" class="form-control col-md-8 col-sm-10 ml-auto"-->
+                        <select name="select" class="form-control col-md-8 col-sm-10 ml-auto " required>
+                            <option value="">-- Selecciona tipo de empresa --</option>
+                            <option value="1">Gastronomica</option>
+                            <option value="2">Salud</option>
+                            <option value="3">Logistica</option>
+                        </select>
+                    </div>
+
+
+
+
+                    <!--Formulario boton enviar-->
+                    <div class="form-group row col-6 ml-auto pt-3 "> 
+                        <button class="btn btn-danger ml-auto">Enviar</button>
+                    </div>
+                    <!--Formulario boton enviar-->
+
+
+
+                </form> <!--Fin del formulario-->
+
+            </div>  <!--Fin de col-->
+        
+
+        
+        </div> <!--Fin de la segunda caja contenedora-->
+
+        <div class="container-fluid row " > <!--Inicio de la tercera caja contenedora-->
+            <div class="col-md-4   mx-auto my-5">  <!--Inicio de columna-->
+                <div class="d-flex justify-content-center">
+                    
+                    <img src="{% static 'images/camion.svg' %}" width="50" height="50" alt="">
+                </div>
+                <h4 class="text-center">Envíos a todo Chile</h4>
+
+                    <p class="text-center pt-3">
+                        Contamos con el mejor equipo de transportistas del país
+                    </p>
+            </div> <!--Fin de columna-->
+
+            <div class="col-md-4  my-5 mx-auto"  > <!--Inicio de la segunda columna-->
+                <div class="d-flex justify-content-center">
+                    
+                    <img  src="{% static 'images/gps.svg' %}" width="50px" height="50px"  alt="">
+                </div>
+                <h4 class="text-center">A la puerta de tu casa</h4>
+                <p class="text-center pt-3">
+                    No debes viajar, llevamos tus pedidos a la puerta de tu casa
+                </p>
+    
+            </div> <!--Fin de la segunda columna-->
+
+            <div class="col-md-4   my-5 mx-auto"  > <!--Inicio de la tercera columna-->
+                <div class="d-flex justify-content-center">
+                    
+                    <img  src="{% static 'images/medal.svg' %}" width="50px" height="50px"  alt="">
+                </div>  
+                <h4 class="text-center">Certificación de transporte</h4>
+                <p class="text-center pt-3">
+                    Contamos con la mejor certificación de transporte gracias a AENOR
+                </p>
+    
+            </div> <!--Fin de la tercera columna-->
+
+            
+            
+
+            
+
+
+
+
+
+        </div> <!--Fin de la tercera caja contenedora-->
+
+        
+
+
+
+    
+
+
+
+
+
+   
+
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
+
+{% endblock %}

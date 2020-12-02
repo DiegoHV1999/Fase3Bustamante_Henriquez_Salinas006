@@ -1,0 +1,22 @@
+{% extends "Base_generic.html" %}
+
+{% block content %}
+
+<div class="pt-5 col-12 card container">
+<div>
+<p class="pt-5 col-2 mx-auto">¿Estas seguro que deseas eliminar al local {{transporte.nombre}}?</p>
+</div>
+<div class="col-2  d-flex mx-auto">
+<form class="pr-2" action="." method="post" accept-charset="utf-8">
+    {% csrf_token %}
+
+    <p><input class="btn btn-danger" type="submit" value="Eliminar"></p>
+</form>
+
+    <p><a class="btn btn-success" href="{% url 'locales' %}">return</a></p>
+</div>
+
+</div>
+
+
+{% endblock %}
