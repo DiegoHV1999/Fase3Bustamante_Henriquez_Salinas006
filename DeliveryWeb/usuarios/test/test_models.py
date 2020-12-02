@@ -36,7 +36,7 @@ class LocalModelTest(TestCase):
 
     def test_get_absolute_url(self):
         Local = local.objects.get(id=1)
-        self.assertEquals(Local.get_absolute_url(), '/usuarios/local/1')
+        self.assertEquals(Local.get_absolute_url(), '/usuarios/local/1/')
 
 
 

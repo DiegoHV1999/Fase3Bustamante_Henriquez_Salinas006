@@ -8,22 +8,22 @@
 
 {% if transporte_list %}
 <div  class="d-flex justify-content-center pt-3 " >
-<div class="card border-primary pb-5 col-8" >
+<div class="card border-primary pb-5 col-sm-8 col-md-8 col-lg-8" >
     <img class="card-img-top" src="{% static 'images/LogoHTML.png' %}" alt="">
-    <div class="card-body mx-auto pt-5 text-danger pt-5 ">
-        <h3 class="card-title display-4 pb-4">Transportes</h3>
+    <div class="card-body mx-auto pt-5 text-danger pt-5 col-sm-8 col-md-8 col-lg-8">
+        <h3 class="card-title display-4 pb-4 ">Transportes</h3>
         
     </div>
     <div class="row">
         <ul class="list-group list-group-flush mx-auto ">
             {% for transporte in transporte_list %}
             <li class="list-group-item ">
-                <a class="col-6 d-flex justify-content-between" href="{{ transporte.get_absolute_url }}"> {{transporte.nombre}}</a> 
+                <a class="d-flex justify-content-start col-sm-6 col-md-6 col-lg-6" href="{{ transporte.get_absolute_url }}"> {{transporte.nombre}}</a> 
                 {% if user.is_authenticated %}
-                    <div class="d-flex justify-content-end col-6">
+                    <div class="d-flex justify-content-end col-sm-6 col-md-6 col-lg-6">
                         <div class="pr-2">
                 
-                            <a href="{% url 'transporte_update' transporte.id %}" class="btn btn-info">Editar</a>
+                            <a href="{% url 'transporte_update' transporte.id %}" class="btn btn-info ">Editar</a>
                         </div>
     
                         <div class="">
@@ -38,7 +38,7 @@
             {% endfor %}
         </ul>
         </div>
-    <div class="pt-5 col-3 mx-auto">   
+    <div class="pt-5 col-6 col-xs-3 col-sm-3 col-md-3 col-lg-3 mx-auto">   
         <a href="{% url 'transporte_create' %}" class="btn btn-success ">+ Añadir transporte </a>
         </div>
 </div>

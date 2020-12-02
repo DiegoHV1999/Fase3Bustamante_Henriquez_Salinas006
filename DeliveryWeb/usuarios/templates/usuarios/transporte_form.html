@@ -1,4 +1,4 @@
-{% extends 'base_generic.html' %}
+{% extends 'Base_generic.html' %}
 {% block content %}
 {% load static %}
 {% load crispy_forms_tags %}
@@ -22,12 +22,12 @@
 <div class="container-fluid col-12 slider">
 <div class="row "> <!--row-->
     
-        <div class="col-6 pt-5 mt-4 mr-auto">
+        <div class="col-12 pt-5 mt-4 mr-auto">
             <div>
                 <h1 class="pb-5">¡Registro!</h1>
             </div>
     
-        <form class="col-6  text-dark" action="" method="POST">
+        <form class="col-12 col-sm-6  text-dark" action="" method="POST">
         {%csrf_token%}
             <table>
                 {{form|crispy}}
